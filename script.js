@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false)
 
 function pickRandom() {
-    fetch("http://time.jsontest.com")
+    fetch("https://qrng.anu.edu.au/API/jsonI.php?length=1&type=uint8&size=6")
         .then(res => res.json())
         .then((out) => {
             console.log('Output: ', out);
