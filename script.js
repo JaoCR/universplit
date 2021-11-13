@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var el = document.getElementById("clickMe");
+    var el = document.getElementById("btnGenerate");
     el.addEventListener("click", pickRandom, false);
 }, false)
 
@@ -8,5 +8,7 @@ function pickRandom() {
         .then(res => res.json())
         .then((out) => {
             console.log('Output: ', out);
+            var label = document.getElementById("number");
+            label.innerHTML = out.data[0];
         }).catch(err => console.error(err));
 }
