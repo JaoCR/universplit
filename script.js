@@ -4,5 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false)
 
 function pickRandom() {
-    alert("works");
+    fetch("http://time.jsontest.com")
+        .then(res => res.json())
+        .then((out) => {
+            console.log('Output: ', out);
+        }).catch(err => console.error(err));
 }
